@@ -1,0 +1,106 @@
+@import "crt.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PermanentMarker";
+  font-style: normal;
+  src: url(/fonts/PermanentMarker.ttf) format("truetype");
+}
+
+html,
+body {
+  min-height: 100vh;
+  height: 100%;
+  background: repeating-linear-gradient(to bottom, #0f0a1e, #0e0a1e 2px, #0e1129 2px, #0f1325 4px);
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.arcade {
+  font-family: "PermanentMarker", serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#__next {
+  height: 100%;
+}
+
+.retro-font {
+  font-size: 25px;
+  font-family: "PermanentMarker", cursive;
+  font-variant:small-caps;
+  -webkit-transform: skew(-15deg,-15deg)/* translate3d(-75px, 0px, 0)*/;
+  background-image: -webkit-linear-gradient(#FF0FF8 0%,  #F9F9F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-filter: drop-shadow(2px 2px 20px #f008b7);
+}
+
+.retro-font:before {
+  content: '';
+  position: absolute;
+  bottom: -98px;
+  left: 254px;
+  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  -webkit-background-clip: text;
+  text-shadow: 70px -7px #F3C8F3;
+}
+
+.retro-font:after {
+  content: '';
+  position: absolute;
+  bottom: -85px;
+  left: 395px;
+  background-image: -webkit-linear-gradient(#F3C8F3 0%, #F3C8F3 100%);
+  -webkit-background-clip: text;
+  text-shadow: 70px -5px #F3C8F3;
+}
+
+@media screen and (min-width: 481px) {
+  .retro-font {
+    font-size: 70px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .retro-font {
+    font-size: 150px;
+  }
+}
+
+@media screen and (min-width: 1079px) {
+  .retro-font {
+    font-size: 180px;
+  }
+  .retro-font:before {
+    content: '-';
+  }
+  .retro-font:after {
+    content: '-';
+  }
+}
+
+@media screen and (min-width: 1919px) {
+  .retro-font {
+    font-size: 200px;
+  }
+  .retro-font:before {
+    content: '-';
+  }
+  .retro-font:after {
+    content: '-';
+  }
+}
